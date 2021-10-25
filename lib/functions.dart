@@ -14,6 +14,10 @@ FutureOr<Response> function(Request request) async {
     return Response.ok('Olá, nundo!!');
   });
 
+  router.get('/oops', (Request request) {
+    return Response.ok('Algo de errado não está certo!');
+  });
+
   router.mount('/user/', UserController().router);
 
   return router(request);
